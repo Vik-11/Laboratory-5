@@ -1,6 +1,3 @@
-start :-
-    writeln('To check de Morgans law enter command demorgan_int ([your 1st set], [your 2nd set])').
-
 universal([0,1,2,3,4,5,6,7,8,9]).
 
 complement(A, CompA) :-
@@ -34,4 +31,12 @@ demorgan_int(A, B) :-
     writeln(SortedS2), 
     SortedS1 == SortedS2.
 
+start :-
+    writeln('To check de Morgans law, applied to digits enter sets in form [1, 2, 3, 4]., A and B'),
+    flush_output,
+    read(A),
+    writeln('Now enter B'),
+    flush_output,
+    read(B),
+    demorgan_int(A, B).
     
