@@ -1,8 +1,4 @@
-start :-
-    writeln('To find max and min digit in number enter max_min(your number, Max, Min)').
-
 digits(0, Max, Min, Max, Min).
-
 update(D, CurrMax, CurrMin, NewMax, NewMin) :-
     (D > CurrMax -> NewMax = D ; NewMax = CurrMax),
     (D < CurrMin -> NewMin = D ; NewMin = CurrMin).
@@ -16,3 +12,12 @@ digits(N, CurrMax, CurrMin, Max, Min) :-
 
 max_min(Number, Max, Min) :-
     digits(Number, 0, 9, Max, Min).
+
+start :-
+    writeln('To find max and min digits in number enter Your number'),
+    read(N),
+    max_min(N, Max, Min),
+    writeln(' Max is '), 
+    write(Max), 
+    write( 'Min is '), 
+    write(Min).
