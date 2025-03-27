@@ -1,5 +1,9 @@
 start :-
-    writeln('To solve logic problem about teachers enter solve(M, V, T)').
+    solve(M, V, T),
+    writeln('Moorozov teaches'), write(M),
+    writeln('Vasiliev teaches '), write(V),
+    writeln('Tokarev teaches '), write(T),
+    !.
 
 teachers([morozov, vasiliev, tokarev]).
 subjects([history, math, biology, geography, english, french]).
